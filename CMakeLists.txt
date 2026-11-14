@@ -8,4 +8,11 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include("/home/hz/toolchain/cmake/toolchain.cmake")
 
-add_executable(cpp-notes src/main.cpp)
+# ---------------------------------------------------------------------------
+# 单元测试（GoogleTest + CTest）
+# 目标定义在 src/static_test/CMakeLists.txt
+# 运行：ctest --test-dir build --output-on-failure
+# ---------------------------------------------------------------------------
+enable_testing()
+
+add_subdirectory(src/static_test)
