@@ -2,17 +2,17 @@
 
 #include <gtest/gtest.h>
 
-#include <cstdio>
+#include <toolkit/tlGLog.h>
 
 int main(int argc, char** argv)
 {
-    std::printf("===== main 进入 =====\n");
+    LOGI << "===== main 进入 =====";
 
     ::testing::InitGoogleTest(&argc, argv);
 
     // RUN_ALL_TESTS() 的返回值：0 表示全部通过，1 表示存在失败用例。
     const int result = RUN_ALL_TESTS();
 
-    std::printf("===== main 退出 =====\n");
+    LOGI << "===== main 退出 =====";
     return result;
 }

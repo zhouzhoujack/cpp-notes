@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include <cstdio>
+#include <toolkit/tlGLog.h>
 
 namespace {
 
@@ -9,12 +9,12 @@ struct Tracker {
 
     explicit Tracker(const char* n) : name(n)
     {
-        std::printf("[ctor] %s\n", name);
+        LOGI << "[ctor] " << name;
     }
 
     ~Tracker()
     {
-        std::printf("[dtor] %s\n", name);
+        LOGI << "[dtor] " << name;
     }
 };
 
